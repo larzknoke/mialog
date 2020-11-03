@@ -1,19 +1,20 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
     extend: {
       colors: {
-        'ws-blue': {
-          100: '#E6F0FF',
-          200: '#BFDAFF',
-          300: '#99C3FF',
-          400: '#4D97FE',
-          500: '#006AFE',
-          600: '#005FE5',
-          700: '#004098',
-          800: '#003072',
-          900: '#00204C',
-        },
+        'mia-green': '#858740',
+        'mia-green-2': '#3D5E57',
       }
+    },
+    container: {
+      center: true
+    },
+    fontFamily: {
+      'sans': ['Fira Sans', ...defaultTheme.fontFamily.sans],
+      'serif': [...defaultTheme.fontFamily.serif],
+      'mono': [...defaultTheme.fontFamily.mono]
     },
   },
   variants: {},

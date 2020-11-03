@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
             includes: "_includes",
             layouts: "_layouts"
         },
-        templateFormats: ["html", "md", "njk"],
+        templateFormats: ["html", "njk"],
         htmlTemplateEngine: "njk",
 
         // 1.1 Enable eleventy to pass dirs specified above
