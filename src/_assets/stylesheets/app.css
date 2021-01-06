@@ -1,44 +1,89 @@
-
-@import 'utils/_tailwind.css';
-@import 'utils/_accessibility.css';
+@import "utils/_tailwind.css";
+@import "utils/_accessibility.css";
 
 /* purgecss start ignore */
 
 :root {
-  --primary: #367ee9;
-  --secondary: #a0aec0;
-  --accent: #718096;
-  --background: #fff;
-  --main: #0d0106;
-  --header: #2d3748;
+	--primary: #367ee9;
+	--secondary: #a0aec0;
+	--accent: #718096;
+	--background: #fff;
+	--main: #0d0106;
+	--header: #2d3748;
 }
 
 @layer base {
-  h1 {
-    @apply text-3xl font-semibold;
-  }
-  h2 {
-    @apply text-2xl font-semibold;
-  }
-  h3 {
-    @apply text-xl font-medium;
-  }
-  h4 {
-    @apply text-base font-semibold;
-  }
-  p {
-    @apply text-base;
-  }
-  a {
-    @apply transition duration-500 ease-in-out
-  }
+	h1 {
+		@apply text-3xl font-semibold;
+	}
+	h2 {
+		@apply text-2xl font-semibold;
+	}
+	h3 {
+		@apply text-xl font-medium;
+	}
+	h4 {
+		@apply text-base font-semibold;
+	}
+	p {
+		@apply text-base;
+	}
+	a {
+		@apply transition duration-500 ease-in-out;
+	}
+	ul {
+		margin-left: 1rem;
+		@apply font-medium;
+	}
 }
 
 .single-box {
-  @apply flex-grow px-10 py-24 relative
+	position: relative;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	flex-grow: 1;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	text-align: center;
 }
 
+.trapezoid {
+	width: 75%;
+	height: 100%;
+	-webkit-clip-path: polygon(0 45%, 100% 0%, 100% 100%, 0% 55%);
+	clip-path: polygon(0 45%, 100% 0%, 100% 100%, 0% 55%);
+	background: #bfbe9c6e;
+	position: absolute;
+}
 
+#starter > g:not(#Rand) {
+	pointer-events: all;
+}
+#starter > g.anim-completed:not(#Rand):hover {
+	cursor: pointer;
+	transform: scale(1.02);
+	transform-origin: 250px 250px;
+}
+#starter > g.anim-completed {
+	transition: transform ease-out 250ms;
+}
 
+.shape-text {
+	shape-outside: ellipse(150px 200px at -20% 50%);
+	width: 300px;
+	height: 300px;
+	border: 10px solid purple;
+	float: left;
+	background-color: rgba(26, 122, 74, 0.432);
+	opacity: 0;
+}
+
+/* Navigation */
+.pink-active.active {
+	@apply text-pink-700;
+}
 
 /* purgecss end ignore */
