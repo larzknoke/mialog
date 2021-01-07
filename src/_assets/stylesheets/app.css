@@ -29,7 +29,7 @@
 		@apply text-base;
 	}
 	a {
-		@apply transition duration-500 ease-in-out;
+		@apply transition duration-300 ease-in-out;
 	}
 	ul {
 		margin-left: 1rem;
