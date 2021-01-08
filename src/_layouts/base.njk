@@ -49,7 +49,7 @@
               <a href="/wofuer" class="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-900 mr-4 {{ 'active' if '/wofuer' in page.url }} pink-active">
                 Unser Wofür
               </a>
-              <a href="/individuum" class="trigger-sub-menu block mt-4 lg:inline-block lg:mt-0 hover:text-gray-900 mr-4 {{ 'active' if '/individuum' in page.url }} pink-active">
+              <a href="/individuum" class="trigger-sub-menu block mt-4 lg:inline-block lg:mt-0 hover:text-gray-900 mr-4 {{ 'active green-active' if '/individuum' in page.url }} {{ 'active pink-active' if '/organisation' in page.url }} {{ 'active gray-active' if '/teams' in page.url }}">
                 Coaching
               </a>
               <div class="sub-nav flex items-center justify-center flex-wrap bg-gray-300 text-gray-700">
@@ -63,13 +63,13 @@
                 </div>
                 <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
                   <div class="lg:flex-grow uppercase">
-                    <a href="/individuum" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green ">
+                    <a href="/individuum" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green">
                       Individuum
                     </a>
-                    <a href="/teams" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white hover:bg-gray-900  {{ 'active' if '/wofuer' in page.url }} pink-active">
+                    <a href="/teams" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white hover:bg-gray-900">
                       Teams
                     </a>
-                    <a href="/organisation" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700  {{ 'active' if '/individuum' in page.url }} pink-active">
+                    <a href="/organisation" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700">
                       Organisation
                     </a>
                   </div>

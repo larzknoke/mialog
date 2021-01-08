@@ -85,6 +85,12 @@
 .pink-active.active {
 	@apply text-pink-700;
 }
+.gray-active.active {
+	@apply text-gray-900;
+}
+.green-active.active {
+	@apply text-mia-green;
+}
 
 .sub-nav {
 	visibility: hidden;
