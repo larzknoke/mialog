@@ -106,11 +106,19 @@
 }
 
 nav a:hover + .sub-nav,
-.sub-nav:hover {
+.sub-nav:hover,
+.sub-nav.active {
 	visibility: visible;
 	opacity: 1;
 	height: 100%;
 	/* display: block; */
 }
 
+.sub-nav.active a.active {
+	color: white !important;
+}
+
+nav.active {
+	margin-bottom: 40px;
+}
 /* purgecss end ignore */
