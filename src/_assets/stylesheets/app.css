@@ -124,11 +124,11 @@ nav.active {
 	margin-bottom: 80px;
 }
 
-#individuum .lastbox,
-#individuum .trapezoid,
-#individuum .slideContent,
-#individuum .single-box,
-#individuum .stacker-top,
+#animation .lastbox,
+#animation .trapezoid,
+#animation .slideContent,
+#animation .single-box,
+#animation .stacker-top,
 .box-header {
 	opacity: 0;
 }

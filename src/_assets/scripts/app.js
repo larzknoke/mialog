@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			});
 			gsap.from("#Rand", { duration: 3, opacity: 0, scale: 0.95, x: 5 });
 		}
-		if (document.getElementById("individuum")) {
+		if (document.getElementById("animation")) {
 			console.log("indi");
 			var stackerTop = document.getElementsByClassName("stacker-top");
 			var boxes = document.getElementsByClassName("stacker");
