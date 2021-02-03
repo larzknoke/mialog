@@ -80,6 +80,11 @@
 	background-color: rgba(26, 122, 74, 0.432);
 	opacity: 0;
 }
+@media (max-width: 640px) {
+	.shape-text {
+		display: none;
+	}
+}
 
 /* Navigation */
 .pink-active.active {

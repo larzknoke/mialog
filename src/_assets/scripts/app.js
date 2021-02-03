@@ -2,6 +2,14 @@ import { gsap, Sine } from "gsap";
 
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function (event) {
+	let hamburger = document.getElementById("hamburgerbtn");
+
+	let mobileMenu = document.getElementById("menu");
+
+	hamburger.addEventListener("click", function () {
+		mobileMenu.classList.toggle("hidden");
+	});
+
 	window.onload = function () {
 		if (document.getElementById("starter")) {
 			gsap.from("#Teams", {

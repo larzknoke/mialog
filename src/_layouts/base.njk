@@ -15,7 +15,7 @@
   <body class="text-gray-700 antialiased ">
     <header class="">
       <div class="top-nav pt-4 ">
-        <ul class="flex justify-end uppercase text-xs">
+        <ul class="flex justify-end uppercase text-xs absolute md:relative flex-col md:flex-row right-0 md:right-auto">
           <li class="mr-6">
             <a class="" href="/impressum">Impressum</a>
           </li>
@@ -33,15 +33,16 @@
           <p class="text-pink-700 text-center">das <span class="font-medium">forum</span> für persönlichkeit <span class="font-medium">Gesundheitswesen</span></p>
         </div>
         <nav class="{{ 'active' if (['/individuum', '/teams', '/organisation'] | contains(page.url)) }} relative flex items-center justify-center flex-wrap bg-gray-200 text-gray-700 mt-4">
-          <div class="block lg:hidden flex-grow">
-            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <div class="block md:hidden flex-grow justify-center">
+            <button id="hamburgerbtn" class="m-auto flex items-center px-3 py-2   text-gray-700 border-gray-400 hover:text-gray-900 hover:border-gray-900">
               <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
               </svg>
+              <span class="ml-2">Menü</span>
             </button>
           </div>
-          <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
+          <div id="menu" class="hidden w-full md:block flex-grow-0 lg:flex lg:items-center lg:w-auto">
             <div class="lg:flex-grow uppercase">
               <a href="/" class="block  lg:inline-block lg:mt-0 hover:text-gray-900 px-4 py-2">
                 Home
@@ -149,7 +150,7 @@
     </div>
     
     
-    <footer class="bg-gray-200  text-gray-600 py-3">
+    <footer class="bg-gray-200  text-gray-600 py-3  px-12">
       <p class=" text-center text-sm">
         <span class="font-medium">mia</span>log <span class="text-pink-700">das <span class="font-medium">forum</span> für persönlichkeit</span> · Lange Lage 17 · 37154 Northeim · Telefon: +49 (0)171 4405076 <br>
         info@mialog.de · Ein Unternehmen der Stiemerling Senioren-Residenzen e.V.
