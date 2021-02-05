@@ -43,7 +43,7 @@
             </button>
           </div>
           <div id="menu" class="hidden w-full md:block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-            <div class="lg:flex-grow uppercase">
+            <div class="lg:flex-grow uppercase text-center md:text-left">
               <a href="/" class="block  lg:inline-block lg:mt-0 hover:text-gray-900 px-4 py-2">
                 Home
               </a>
@@ -56,10 +56,10 @@
               <div class="{{ 'active' if (['/individuum', '/teams', '/organisation'] | contains(page.url)) }} sub-nav flex items-center justify-center flex-wrap bg-gray-300 text-gray-700">
                 <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
                   <div class="lg:flex-grow uppercase">
-                    <a href="/individuum" class="relative block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum' in page.url }}">
+                    <a id="indi-trigger" href="/individuum" class="relative block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum' in page.url }}">
                       Individuum
                     </a>
-                    <div class="{{ 'active' if (['/individuum'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
+                    <div id="indi-nav" class="{{ 'active' if (['/individuum'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
                       <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
                         <div class="lg:flex-grow uppercase">
                           <a href="/individuum/personalcoaching" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/personalcoaching/' in page.url }}">
@@ -80,10 +80,10 @@
                         </div>
                       </div>
                     </div>
-                    <a href="/teams" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-white hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams' in page.url }}">
+                    <a id="teams-trigger" href="/teams" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-white hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams' in page.url }}">
                       Teams
                     </a>
-                    <div class="{{ 'active' if (['/teams'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
+                    <div id="teams-nav" class="{{ 'active' if (['/teams'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
                       <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
                         <div class="lg:flex-grow uppercase">
                           <a href="/teams/businesscoaching/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoaching/' in page.url }}">
@@ -104,10 +104,10 @@
                         </div>
                       </div>
                     </div>
-                    <a href="/organisation" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation' in page.url }}">
+                    <a id="orga-trigger" href="/organisation" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation' in page.url }}">
                       Organisation
                     </a>
-                    <div class="{{ 'active' if (['/organisation/'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-pink-700">
+                    <div id="orga-nav" class="{{ 'active' if (['/organisation/'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-pink-700">
                       <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
                         <div class="lg:flex-grow uppercase">
                           <a href="/organisation/organisationsentwicklung/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationsentwicklung/' in page.url }}">
