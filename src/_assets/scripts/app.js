@@ -1,51 +1,48 @@
 import { gsap, Sine } from "gsap";
 
+/*********************/
+/* CHECK MOBILE      */
+/*********************/
+
+function mobileViewUpdate() {
+	var viewportWidth = window.innerWidth;
+	if (viewportWidth <= 1024) {
+		if (document.body.className.indexOf(" mobile") === -1) {
+			document.body.className += " mobile";
+			let indiTrigger = document.getElementById("indi-trigger");
+			let indiNav = document.getElementById("indi-nav");
+			indiTrigger.addEventListener("click", function (ev) {
+				ev.preventDefault();
+				indiNav.classList.toggle("sub-active");
+			});
+
+			let teamsTrigger = document.getElementById("teams-trigger");
+			let teamsNav = document.getElementById("teams-nav");
+			teamsTrigger.addEventListener("click", function (ev) {
+				ev.preventDefault();
+				teamsNav.classList.toggle("sub-active");
+			});
+
+			let orgaTrigger = document.getElementById("orga-trigger");
+			let orgaNav = document.getElementById("orga-nav");
+			orgaTrigger.addEventListener("click", function (ev) {
+				ev.preventDefault();
+				orgaNav.classList.toggle("sub-active");
+			});
+		}
+	} else {
+		if (document.body.className.indexOf(" mobile") > -1) {
+			document.body.className = document.body.className.replace(" mobile", "");
+		}
+	}
+}
+
+window.onload = mobileViewUpdate();
+window.onresize = mobileViewUpdate();
+
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function (event) {
 	window.onload = function () {
-		/*********************/
-		/* CHECK MOBILE      */
-		/*********************/
-
-		function mobileViewUpdate() {
-			var viewportWidth = window.innerWidth;
-			if (viewportWidth <= 1024) {
-				if (document.body.className.indexOf(" mobile") === -1) {
-					document.body.className += " mobile";
-					let indiTrigger = document.getElementById("indi-trigger");
-					let indiNav = document.getElementById("indi-nav");
-					indiTrigger.addEventListener("click", function (ev) {
-						ev.preventDefault();
-						indiNav.classList.toggle("sub-active");
-					});
-
-					let teamsTrigger = document.getElementById("teams-trigger");
-					let teamsNav = document.getElementById("teams-nav");
-					teamsTrigger.addEventListener("click", function (ev) {
-						ev.preventDefault();
-						teamsNav.classList.toggle("sub-active");
-					});
-
-					let orgaTrigger = document.getElementById("orga-trigger");
-					let orgaNav = document.getElementById("orga-nav");
-					orgaTrigger.addEventListener("click", function (ev) {
-						ev.preventDefault();
-						orgaNav.classList.toggle("sub-active");
-					});
-				}
-			} else {
-				if (document.body.className.indexOf(" mobile") > -1) {
-					document.body.className = document.body.className.replace(
-						" mobile",
-						""
-					);
-				}
-			}
-		}
-
-		window.onload = mobileViewUpdate();
-		window.onresize = mobileViewUpdate();
-
 		/*********************/
 		/* MOBILE NAVIGATION */
 		/*********************/
