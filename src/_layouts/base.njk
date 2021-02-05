@@ -27,7 +27,7 @@
           <div class="container relative  w-48">
             <a href="/">
               <img src="/static/images/mialog_logo.svg" alt="migalog Logo" >
-              <img src="/static/images/header_line.svg" alt="subline" class="absolute w-64 max-w-none" style="left: -25rem;top: 3rem;">
+              <img src="/static/images/header_line.svg" alt="subline" class="hidden absolute md:inline-block md:w-64 max-w-none" style="left: -25rem;top: 3rem;">
             </a>
           </div>
           <p class="text-pink-700 text-center">das <span class="font-medium">forum</span> für persönlichkeit <span class="font-medium">Gesundheitswesen</span></p>
@@ -42,99 +42,99 @@
               <span class="ml-2">Menü</span>
             </button>
           </div>
-          <div id="menu" class="hidden w-full md:block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-            <div class="lg:flex-grow uppercase text-center md:text-left">
-              <a href="/" class="block  lg:inline-block lg:mt-0 hover:text-gray-900 px-4 py-2">
+          <div id="menu" class="hidden w-full md:block flex-grow-0 md:flex md:items-center md:w-auto">
+            <div class="md:flex-grow uppercase text-center md:text-left">
+              <a href="/" class="block  md:inline-block md:mt-0 hover:text-gray-900 px-4 py-2">
                 Home
               </a>
-              <a href="/wofuer" class="block  lg:inline-block lg:mt-0 hover:text-gray-900 px-4 py-2 {{ 'active' if '/wofuer' in page.url }} pink-active">
+              <a href="/wofuer" class="block  md:inline-block md:mt-0 hover:text-gray-900 px-4 py-2 {{ 'active' if '/wofuer' in page.url }} pink-active">
                 Unser Wofür
               </a>
-              <a href="/individuum" class="trigger-sub-menu block  lg:inline-block lg:mt-0 hover:text-gray-900 px-4 py-2 {{ 'active green-active' if '/individuum' in page.url }} {{ 'active pink-active' if '/organisation' in page.url }} {{ 'active gray-active' if '/teams' in page.url }}">
+              <a href="/individuum" class="trigger-sub-menu block  md:inline-block md:mt-0 hover:text-gray-900 px-4 py-2 {{ 'active green-active' if '/individuum' in page.url }} {{ 'active pink-active' if '/organisation' in page.url }} {{ 'active gray-active' if '/teams' in page.url }}">
                 Coaching
               </a>
               <div class="{{ 'active' if (['/individuum', '/teams', '/organisation'] | contains(page.url)) }} sub-nav flex items-center justify-center flex-wrap bg-gray-300 text-gray-700">
-                <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-                  <div class="lg:flex-grow uppercase">
-                    <a id="indi-trigger" href="/individuum" class="relative block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum' in page.url }}">
+                <div class="w-full block flex-grow-0 md:flex md:items-center md:w-auto">
+                  <div class="md:flex-grow uppercase">
+                    <a id="indi-trigger" href="/individuum" class="relative block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum' in page.url }}">
                       Individuum
                     </a>
                     <div id="indi-nav" class="{{ 'active' if (['/individuum'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
-                      <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-                        <div class="lg:flex-grow uppercase">
-                          <a href="/individuum/personalcoaching" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/personalcoaching/' in page.url }}">
+                      <div class="w-full block flex-grow-0 md:flex md:items-center md:w-auto">
+                        <div class="md:flex-grow uppercase">
+                          <a href="/individuum/personalcoaching" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/personalcoaching/' in page.url }}">
                             PERSONALCOACHING IST
                           </a>
-                          <a href="/individuum/personalcoachinghilftwenn/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/personalcoachinghilftwenn/' in page.url }}">
+                          <a href="/individuum/personalcoachinghilftwenn/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/personalcoachinghilftwenn/' in page.url }}">
                             HILFT IHNEN, WENN
                           </a>
-                          <a href="/individuum/loesungentdecken/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/loesungentdecken/' in page.url }}">
+                          <a href="/individuum/loesungentdecken/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/loesungentdecken/' in page.url }}">
                             IHRE LÖSUNGEN ENTDECKEN
                           </a>
-                          <a href="/individuum/coachingerwartung/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/coachingerwartung/' in page.url }}">
+                          <a href="/individuum/coachingerwartung/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/coachingerwartung/' in page.url }}">
                             DAS KÖNNEN SIE ERWARTEN
                           </a>
-                          <a href="/individuum/coachingmoeglich/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/coachingmoeglich/' in page.url }}">
+                          <a href="/individuum/coachingmoeglich/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-mia-green hover:bg-mia-green {{ 'bg-mia-green active' if '/individuum/coachingmoeglich/' in page.url }}">
                             DAS WIRD MÖGLICH
                           </a>
                         </div>
                       </div>
                     </div>
-                    <a id="teams-trigger" href="/teams" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-white hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams' in page.url }}">
+                    <a id="teams-trigger" href="/teams" class="block py-2 px-4 md:inline-block md:mt-0 text-gray-700 hover:text-white hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams' in page.url }}">
                       Teams
                     </a>
                     <div id="teams-nav" class="{{ 'active' if (['/teams'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-gray-700">
-                      <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-                        <div class="lg:flex-grow uppercase">
-                          <a href="/teams/businesscoaching/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoaching/' in page.url }}">
+                      <div class="w-full block flex-grow-0 md:flex md:items-center md:w-auto">
+                        <div class="md:flex-grow uppercase">
+                          <a href="/teams/businesscoaching/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoaching/' in page.url }}">
                             BUSINESSCOACHING IST
                           </a>
-                          <a href="/teams/businesscoachinghilftwenn/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoachinghilftwenn/' in page.url }}">
+                          <a href="/teams/businesscoachinghilftwenn/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoachinghilftwenn/' in page.url }}">
                             HILFT IHNEN, WENN
                           </a>
-                          <a href="/teams/teamvorbild/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/teamvorbild/' in page.url }}">
+                          <a href="/teams/teamvorbild/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/teamvorbild/' in page.url }}">
                             WERDEN SIE TEAM-VORBILD
                           </a>
-                          <a href="/teams/fuehrungsstil/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/fuehrungsstil/' in page.url }}">
+                          <a href="/teams/fuehrungsstil/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/fuehrungsstil/' in page.url }}">
                             ENTDECKEN SIE IHREN FÜHRUNGSSTIL
                           </a>
-                          <a href="/teams/businesscoachingmoeglich/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoachingmoeglich/' in page.url }}">
+                          <a href="/teams/businesscoachingmoeglich/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-gray-700 hover:bg-gray-700 {{ 'bg-gray-700 active' if '/teams/businesscoachingmoeglich/' in page.url }}">
                             DAS WIRD MÖGLICH
                           </a>
                         </div>
                       </div>
                     </div>
-                    <a id="orga-trigger" href="/organisation" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation' in page.url }}">
+                    <a id="orga-trigger" href="/organisation" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation' in page.url }}">
                       Organisation
                     </a>
                     <div id="orga-nav" class="{{ 'active' if (['/organisation/'] | contains(page.url)) }} sub-nav sub-sub-nav flex items-center justify-center flex-wrap bg-gray-200 text-pink-700">
-                      <div class="w-full block flex-grow-0 lg:flex lg:items-center lg:w-auto">
-                        <div class="lg:flex-grow uppercase">
-                          <a href="/organisation/organisationsentwicklung/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationsentwicklung/' in page.url }}">
+                      <div class="w-full block flex-grow-0 md:flex md:items-center md:w-auto">
+                        <div class="md:flex-grow uppercase">
+                          <a href="/organisation/organisationsentwicklung/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationsentwicklung/' in page.url }}">
                             ORGANISATIONSENTWICKLUNG IST 
                           </a>
-                          <a href="/organisation/organisationhilftwenn/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationhilftwenn/' in page.url }}">
+                          <a href="/organisation/organisationhilftwenn/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationhilftwenn/' in page.url }}">
                             HILFT IHNEN, WENN
                           </a>
-                          <a href="/organisation/organisationmitarbeiter/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationmitarbeiter/' in page.url }}">
+                          <a href="/organisation/organisationmitarbeiter/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationmitarbeiter/' in page.url }}">
                             MITARBEITER MITNEHMEN
                           </a>
-                          <a href="/organisation/unternehmenentwickeln/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/unternehmenentwickeln/' in page.url }}">
+                          <a href="/organisation/unternehmenentwickeln/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/unternehmenentwickeln/' in page.url }}">
                             ENTWICKLUNG IHRES UNTERNEHMENS
                           </a>
-                          <a href="/organisation/organisationsentwicklungmoeglich/" class="block py-2 px-4 lg:inline-block lg:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationsentwicklungmoeglich/' in page.url }}">
+                          <a href="/organisation/organisationsentwicklungmoeglich/" class="block py-2 px-4 md:inline-block md:mt-0 hover:text-white text-pink-700 hover:bg-pink-700 {{ 'bg-pink-700 active' if '/organisation/organisationsentwicklungmoeglich/' in page.url }}">
                             DAS WIRD MÖGLICH
                           </a>
                         </div>
                       </div>
                     </div>                    
-                    <a href="/static/GanzheitlicheProzessbegleitung.pdf" target="_blank" class="block py-2 px-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-white hover:bg-gray-700">
+                    <a href="/static/GanzheitlicheProzessbegleitung.pdf" target="_blank" class="block py-2 px-4 md:inline-block md:mt-0 text-gray-700 hover:text-white hover:bg-gray-700">
                       Prozessbegleitung
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/uebermich" class="block px-4 py-2 lg:inline-block lg:mt-0 hover:text-gray-900 {{ 'active' if '/uebermich' in page.url }} pink-active">
+              <a href="/uebermich" class="block px-4 py-2 md:inline-block md:mt-0 hover:text-gray-900 {{ 'active' if '/uebermich' in page.url }} pink-active">
                 Kontakt
               </a>
             </div>
@@ -144,7 +144,7 @@
     </header>
     
     <div id="main" class="bg-gray-100 font-light">
-      <main class="mx-auto sm:px-5 py-8 lg:py-12 max-w-sm sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl ">
+      <main class="mx-auto sm:px-5 py-8 md:py-12 max-w-sm sm:max-w-screen-sm md:max-w-screen-md md:max-w-screen-lg xl:max-w-screen-xl ">
         {{ content | safe }}
       </main>
     </div>
