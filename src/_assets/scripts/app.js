@@ -6,9 +6,14 @@ import { gsap, Sine } from "gsap";
 
 function mobileViewUpdate() {
 	var viewportWidth = window.innerWidth;
-	if (viewportWidth <= 1024) {
+	if (viewportWidth <= 768) {
 		if (document.body.className.indexOf(" mobile") === -1) {
 			document.body.className += " mobile";
+			let coachingTrigger = document.getElementById("coaching-trigger");
+			coachingTrigger.addEventListener("click", function (ev) {
+				ev.preventDefault();
+				window.location = "/individuum/personalcoaching/";
+			});
 			let indiTrigger = document.getElementById("indi-trigger");
 			let indiNav = document.getElementById("indi-nav");
 			indiTrigger.addEventListener("click", function (ev) {
