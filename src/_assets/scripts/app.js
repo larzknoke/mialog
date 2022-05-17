@@ -1,4 +1,5 @@
 import { gsap, Sine } from "gsap";
+import { tns } from "tiny-slider";
 
 /*********************/
 /* CHECK MOBILE      */
@@ -199,4 +200,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	var addTransition = function () {
 		this.targets()[0].classList.add("anim-completed");
 	};
+
+	var slider = tns({
+		container: ".tns-slider",
+		items: 1,
+		slideBy: "page",
+		// autoplay: true,
+		autoplayHoverPause: true,
+		autoplayTimeout: 2000,
+		mouseDrag: true,
+		controlsPosition: "bottom",
+		arrowKeys: true,
+		nav: false,
+		controlsText: [
+			"<div class='w-4 overflow-hidden inline-block'><div class='  h-10 bg-pink-700 -rotate-45 transform origin-top-right'></div></div>",
+			"<div class='w-4 overflow-hidden inline-block'><div class='  h-10 bg-pink-700 rotate-45 transform origin-top-left'></div></div>",
+		],
+		// controlsContainer: "slider-controls",
+		// controlsContainer: "#customize-controls",
+	});
 });

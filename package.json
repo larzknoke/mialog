@@ -33,6 +33,7 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"gsap": "^3.5.1"
+		"gsap": "^3.5.1",
+		"tiny-slider": "^2.9.4"
 	}
 }

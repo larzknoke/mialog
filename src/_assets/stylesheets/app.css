@@ -1,6 +1,7 @@
 @import "fonts.css";
 @import "utils/_tailwind.css";
 @import "utils/_accessibility.css";
+@import "utils/_slider";
 
 /* purgecss start ignore */
 
@@ -157,4 +158,44 @@ body:not(.mobile) nav.active {
 .box-header {
 	opacity: 0;
 }
+
+/* SLIDER */
+
+.tns-outer {
+	position: relative;
+}
+
+.tns-controls {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%;
+	top: 45%;
+	padding: 0 20px;
+}
+
+.tns-controls button:focus {
+	outline: none;
+}
+
+/* PEP */
+
+.pep-teaser {
+	@apply flex flex-col;
+}
+
+.pep-teaser * {
+	@apply transition-all duration-200;
+}
+
+.pep-teaser:hover a {
+	@apply bg-pink-700;
+}
+.pep-teaser img {
+	@apply border-transparent border-4;
+}
+.pep-teaser:hover img {
+	@apply border-pink-700 border-4;
+}
+
 /* purgecss end ignore */
