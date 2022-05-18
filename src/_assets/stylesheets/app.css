@@ -184,17 +184,17 @@ body:not(.mobile) nav.active {
 	@apply flex flex-col;
 }
 
-.pep-teaser * {
+.pep-teaser {
 	@apply transition-all duration-200;
 }
 
 .pep-teaser:hover a {
 	@apply bg-pink-700;
 }
-.pep-teaser img {
+.pep-teaser a {
 	@apply border-transparent border-4;
 }
-.pep-teaser:hover img {
+.pep-teaser:hover a {
 	@apply border-pink-700 border-4;
 }
 
